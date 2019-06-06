@@ -14,19 +14,5 @@ Migrate(app,db)
 manager.add_command('db',MigrateCommand)
 
 
-
-@app.route("/")
-def index():
-    # 演示log
-    logging.error("error")
-    logging.debug("debug")
-    logging.warning("warning")
-    logging.info("info")
-    logging.critical("critical")
-
-    return  "hello world"
-
-
-
 if __name__ == "__main__":
     manager.run()
