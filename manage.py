@@ -1,6 +1,7 @@
 from flask  import Flask
 from flask_sqlalchemy import SQLAlchemy
 from redis import StrictRedis
+from flask_wtf import CSRFProtect
 class Config(object):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = 'mysql://root:mysql@127.0.0.1:3306/programming'
@@ -17,6 +18,8 @@ app.config.from_object(Config)
 db = SQLAlchemy(app)
 # 3.配置redis
 redis_store = StrictRedis(host=Config.REDIS_HOST,port=Config.REDIS_PORT)
+# 4. 配置CSRFProtect
+CSRFProtect(app)
 
 
 
