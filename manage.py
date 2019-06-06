@@ -1,3 +1,5 @@
+import logging
+
 from flask  import session
 from flask_script import Manager
 from flask_migrate import MigrateCommand,Migrate
@@ -15,7 +17,13 @@ manager.add_command('db',MigrateCommand)
 
 @app.route("/")
 def index():
-    session["hhh"]='hjhkhk'
+    # 演示log
+    logging.error("error")
+    logging.debug("debug")
+    logging.warning("warning")
+    logging.info("info")
+    logging.critical("critical")
+
     return  "hello world"
 
 

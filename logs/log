@@ -1,0 +1,16 @@
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [06/Jun/2019 16:13:53] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [06/Jun/2019 16:13:54] "GET /favicon.ico HTTP/1.1" 404 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+ERROR manage.py:21 error
+DEBUG manage.py:22 debug
+WARNING manage.py:23 warning
+INFO manage.py:24 info
+CRITICAL manage.py:25 critical
+INFO _internal.py:122 127.0.0.1 - - [06/Jun/2019 16:16:56] "GET / HTTP/1.1" 200 -

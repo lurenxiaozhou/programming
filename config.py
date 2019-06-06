@@ -1,3 +1,5 @@
+import logging
+
 from redis import StrictRedis
 
 
@@ -26,11 +28,12 @@ class Config(object):
 #开发环境配置
 class DevelopConfig(Config):
     DEBUG = True
+    LOG_LEVEL=logging.DEBUG
 
 
  # 生产环境
 class ProductConfig(Config):
-    pass
+    LOG_LEVEL = logging.ERROR
 
 
 #测试环境
