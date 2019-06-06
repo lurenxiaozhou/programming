@@ -3,7 +3,6 @@ from redis import StrictRedis
 
 
 class Config(object):
-    DEBUG = True
     SECRET_KEY = 'dawangjiaowolaixunshan'
     SQLALCHEMY_DATABASE_URI = 'mysql://root:mysql@127.0.0.1:3306/programming'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
@@ -21,3 +20,28 @@ class Config(object):
     SESSION_USE_SIGNER = True
     #设置保存时间两天
     PERMANENT_SESSION_LIFETIME = 86400 * 2
+
+
+# 面向对象继承
+#开发环境配置
+class DevelopConfig(Config):
+    DEBUG = True
+
+
+ # 生产环境
+class ProductConfig(Config):
+    pass
+
+
+#测试环境
+class TestingConfig(Config):
+    DEBUG = True
+
+
+# 用字典进行封装
+config = {
+    "develop":DevelopConfig,
+    "product":ProductConfig,
+    "testing":TestingConfig
+}
+
