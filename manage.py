@@ -1,10 +1,11 @@
-from flask  import Flask
+from flask  import Flask,session
 from flask_sqlalchemy import SQLAlchemy
 from redis import StrictRedis
 from flask_wtf import CSRFProtect
 from flask_session import Session
 class Config(object):
     DEBUG = True
+    SECRET_KEY = 'dawangjiaowolaixunshan'
     SQLALCHEMY_DATABASE_URI = 'mysql://root:mysql@127.0.0.1:3306/programming'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     #redis类属性
@@ -37,6 +38,7 @@ Session(app)
 
 @app.route("/")
 def index():
+    session["hhh"]='hjhkhk'
     return  "hello world"
 
 
