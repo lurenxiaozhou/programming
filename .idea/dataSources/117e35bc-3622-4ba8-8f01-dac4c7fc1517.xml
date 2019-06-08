@@ -4,7 +4,6 @@
     <root id="1"/>
     <schema id="2" parent="1" name="book_info">
       <Current>1</Current>
-      <Visible>1</Visible>
     </schema>
     <schema id="3" parent="1" name="hanxiaohan"/>
     <schema id="4" parent="1" name="information"/>
@@ -24,33 +23,5 @@
     <schema id="18" parent="1" name="programming">
       <Visible>1</Visible>
     </schema>
-    <table id="19" parent="2" name="info"/>
-    <column id="20" parent="19" name="id">
-      <Position>1</Position>
-      <DataType>int(10) unsigned|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="21" parent="19" name="b_name">
-      <Position>2</Position>
-      <DataType>varchar(50)|0</DataType>
-    </column>
-    <column id="22" parent="19" name="b_num">
-      <Position>3</Position>
-      <DataType>int(11)|0</DataType>
-    </column>
-    <column id="23" parent="19" name="b_price">
-      <Position>4</Position>
-      <DataType>float|0</DataType>
-    </column>
-    <column id="24" parent="19" name="b_txt">
-      <Position>5</Position>
-      <DataType>varchar(200)|0</DataType>
-    </column>
-    <key id="25" parent="19" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
   </database-model>
 </dataSource>
