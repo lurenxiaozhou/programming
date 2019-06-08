@@ -1,9 +1,9 @@
-from info import redis_store
+from flask import render_template
 from info.modules.index import index_blu
 
 
 @index_blu.route("/")
 def index():
-    # 测试是否设置成功
-    redis_store.set('names','xiaozhou')
-    return  "hello world"
+
+
+    return  render_template('news/index.html')
