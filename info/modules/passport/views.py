@@ -12,7 +12,7 @@ from utils.captcha.captcha import captcha
 from utils.response_code import RET
 
 
-@passport_blu.route('/sms_code',method = ['POST'])
+@passport_blu.route('/sms_code',methods = ['POST'])
 def get_sms_code():
     """
     1.接收参数mobile，image_code，image_code_id
@@ -35,7 +35,7 @@ def get_sms_code():
     # 4.验证输入的验证码是否正确
     try:
         real_image_code = redis_store.get("ImageCodeId_"+image_code_id)
-        # 如果去出来值则删除数据库中的数据
+        # 如果取出来值则删除数据库中的数据
         if real_image_code:
             real_image_code = real_image_code.decode()
             redis_store.delete("ImageCodeId_"+image_code_id)
