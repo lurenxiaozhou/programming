@@ -100,7 +100,7 @@ $(function(){
 		$(this).find('a')[0].click()
 	})
 
-    // TODO 登录表单提交
+    //  登录表单提交
     $(".login_form_con").submit(function (e) {
         e.preventDefault()
         var mobile = $(".login_form #mobile").val()
@@ -117,6 +117,7 @@ $(function(){
         }
 
         // 发起登录请求
+        
     })
 
 
