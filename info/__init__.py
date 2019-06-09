@@ -8,6 +8,7 @@ from redis import  StrictRedis
 from flask_wtf.csrf import CSRFProtect,generate_csrf
 from flask_session import Session
 
+from info.utils.common import do_index_class
 
 
 def set_log(config_name):
@@ -57,4 +58,6 @@ def create_app(config_name):
     app.register_blueprint(index_blu)
     from info.modules.passport import passport_blu
     app.register_blueprint(passport_blu)
+    # 添加过滤器
+    app.add_template_filter(do_index_class,"index_class")
     return app
