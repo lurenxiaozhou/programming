@@ -47,6 +47,8 @@ def create_app(config_name):
     def after_request(response):
         # 通过wtf这个扩展给我们生成的token
         csrf_token = generate_csrf()
+        response.set_cookie("csrf_token",csrf_token)
+        return response
     CSRFProtect(app)
     # 5. 配置Session
     Session(app)

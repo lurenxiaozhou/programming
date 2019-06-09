@@ -867,3 +867,69 @@ INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:03:33] "GET /favicon.ico HTT
 INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:03:35] "GET /passport/logout HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:03:35] "GET / HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:03:41] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:07] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:07] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:07] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:07] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:07] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:07] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:07] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:07] "GET /static/news/images/news_pic.jpg HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:07] "GET /static/news/images/person.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:07] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:07] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:08] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:09] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:21] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:21] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:21] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:24] "GET /passport/logout HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:24] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:26] "GET /passport/image_code?imageCodeId=fe216954-c287-4ad9-940c-cc25226bcfe8 HTTP/1.1" 200 -
+INFO csrf.py:251 The CSRF token is missing.
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:20:42] "POST /passport/sms_code HTTP/1.1" 400 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:06] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:06] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:06] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:06] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:07] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:07] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:07] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:07] "GET /static/news/images/news_pic.jpg HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:07] "GET /static/news/images/person.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:07] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:07] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:07] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:13] "GET /passport/image_code?imageCodeId=720c2fd8-7e0a-4c6d-96dd-205a98d51164 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:13] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+DEBUG views.py:176 短信验证内容283647
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:26] "POST /passport/sms_code HTTP/1.1" 200 -
+INFO csrf.py:251 The CSRF token is missing.
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:22:36] "POST /passport/register HTTP/1.1" 400 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:18] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:18] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:18] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:18] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:18] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:18] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:18] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:18] "GET /static/news/images/news_pic.jpg HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:18] "GET /static/news/images/person.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:18] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:18] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:18] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:20] "GET /passport/image_code?imageCodeId=6c25aed5-d27d-4b05-9fc0-812890c4d29d HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:20] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+DEBUG views.py:176 短信验证内容046243
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:32] "POST /passport/sms_code HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:48] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:48] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 19:23:48] "GET /static/news/images/person01.png HTTP/1.1" 200 -
