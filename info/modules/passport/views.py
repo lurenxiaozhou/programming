@@ -20,6 +20,7 @@ def get_sms_code():
     3.效验用户输入的验证码和通过image_code_id查询redis的是否一致
     :return:
     """
+
     #json数据接收
     dict_data = request.json
     # 1.接收参数

@@ -42,7 +42,7 @@ def create_app(config_name):
     global redis_store
     redis_store = StrictRedis(host=config[config_name].REDIS_HOST,port=config[config_name].REDIS_PORT)
     # 4. 配置CSRFProtect
-    CSRFProtect(app)
+    # CSRFProtect(app)
     # 5. 配置Session
     Session(app)
     # 注册蓝图
