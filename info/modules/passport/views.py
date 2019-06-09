@@ -1,5 +1,7 @@
+
 import random
 import re
+from datetime import datetime
 
 import constants
 from info import redis_store, db
@@ -11,6 +13,59 @@ from info.models import User
 
 from utils.captcha.captcha import captcha
 from utils.response_code import RET
+
+
+@passport_blu.route('/login',methods=["POST"])
+def login():
+    """
+    1.接收参数
+    2.效验参数， 手机格式 密码是否正确
+    3.保持用户登录状态
+    5.设置用户登录状态
+    4.返回响应
+    :return:
+    """
+    # 接收参数
+    dict_data = request.json
+    mobile = dict_data.get("mobile")
+    passport = dict_data.get("passport")
+    if not all([mobile,passport]):
+        return jsonify(errno = RET.PARAMERR, errmsg ="参数错误")
+    # 手机匹配
+    if not re.match(r"1[35678][0-9]{9}$",mobile):
+        return jsonify(errno = RET.DATAERR,errmsg = "号码不符合")
+    try:
+        user = User.query.filter_by(mobile = mobile).first()
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno = RET.DBERR,errmsg = "数据库查询错误")
+    if not user:
+        return jsonify(errno = RET.NODATA,errmsg = "用户不存在")
+    if not user.check_passowrd(passport):
+        return jsonify(errno = RET.DATAERR,errmsg = "密码是否错误")
+
+    # 写入操作时间
+    user.last_login = datetime.now()
+    try:
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        current_app.logger.error(e)
+        return jsonify(errno = RET.DBERR,errmsg = "数据保存失败")
+    # 保持用户登录状态
+    session["user_id"] = user.id
+
+    return jsonify(errno = RET.OK,errmsg = "登录成功")
+
+
+
+
+
+
+
+
+
+
 
 
 @passport_blu.route('/register',methods=["POST"])
