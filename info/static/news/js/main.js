@@ -117,11 +117,28 @@ $(function(){
         }
 
         // 发起登录请求
-        
+        var params = {
+            "mobile":mobile,
+            "passport":password
+        }
+        $.ajax({
+            url:"passport/login",
+            type:"post",
+            contentType:"application/json",
+            data:JSON.stringify(params),
+            success: function (resp) {
+                if (resp.errno = "0"){
+                    location.reload()
+                }else{
+                    alert(resp.errmsg)
+                }
+
+            }
+        })
     })
 
 
-    // TODO 注册按钮点击
+    // 注册按钮点击
     $(".register_form_con").submit(function (e) {
         // 阻止默认提交操作
         e.preventDefault()

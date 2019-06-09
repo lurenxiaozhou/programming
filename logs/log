@@ -727,3 +727,50 @@ DEBUG views.py:130 短信验证内容543464
 INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 13:58:41] "POST /passport/sms_code HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 13:58:52] "POST /passport/register HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 13:58:52] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:58:17] "GET /passport/image_code?imageCodeId=4061f3fe-c6c7-41e0-a2ff-4ffce06995c1 HTTP/1.1" 200 -
+DEBUG views.py:186 短信验证内容916300
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:58:29] "POST /passport/sms_code HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:58:45] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:58:45] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:59:28] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:59:28] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:59:28] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:59:28] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:59:28] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:59:28] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:59:29] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:59:29] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:59:29] "GET /static/news/images/news_pic.jpg HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:59:29] "GET /static/news/images/person.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:59:29] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:59:29] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:59:29] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 15:59:30] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:34] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:34] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:34] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:34] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:34] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:34] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:34] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:34] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:34] "GET /static/news/images/news_pic.jpg HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:34] "GET /static/news/images/person.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:34] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:34] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:34] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:36] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:45] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:00:46] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:01:35] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:01:37] "GET /passport/image_code?imageCodeId=65f3beb0-9b3c-4398-b0a6-da53b24305a3 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:01:43] "POST /passport/sms_code HTTP/1.1" 200 -
+DEBUG views.py:186 短信验证内容192246
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:02:05] "POST /passport/sms_code HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:03:27] "GET /passport/image_code?imageCodeId=888aabb4-cedb-4596-bf20-456c8a78e1de HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:03:30] "POST /passport/sms_code HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [09/Jun/2019 16:03:33] "GET /passport/image_code?imageCodeId=772efba4-09ff-415e-90a3-e2163e9f4c5e HTTP/1.1" 200 -
