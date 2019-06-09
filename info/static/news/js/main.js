@@ -313,3 +313,12 @@ function generateUUID() {
     });
     return uuid;
 }
+
+function logout() {
+    $.get("/passport/logout",function (response) {
+        if(response.errno == "0"){
+            location.reload()
+        }
+
+    })
+}
