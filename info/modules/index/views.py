@@ -22,10 +22,11 @@ def index():
         current_app.logger.error(e)
 
     clicks_news_li = []
-    for news_obj in clicks_news:
-        clicks_news_dict = news_obj.to_basic_dict()
-        clicks_news_li.append(clicks_news_dict)
-
+    # for news_obj in clicks_news:
+    #     clicks_news_dict = news_obj.to_basic_dict()
+    #     clicks_news_li.append(clicks_news_dict)
+    # 列表推倒式
+    clicks_news_li = [news_obj.to_basic_dict() for news_obj in clicks_news]
 
     # 如果user为空那么传一个None，如果不为空user.to_dict
     data = {
