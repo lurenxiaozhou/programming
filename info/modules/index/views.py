@@ -1,6 +1,7 @@
 from flask import render_template, send_file, current_app, redirect, session
 from info.modules.index import index_blu
 from info.models import User, News
+from info import constants
 
 
 @index_blu.route("/")
@@ -17,7 +18,7 @@ def index():
     #1.显示新闻列表
     clicks_news = []
     try:
-        clicks_news = News.query.order_by(News.clicks.desc()).limit(6).all()
+        clicks_news = News.query.order_by(News.clicks.desc()).limit(constants.CLICK_RANK_MAX_NEWS).all()
     except Exception as e:
         current_app.logger.error(e)
 
@@ -33,6 +34,8 @@ def index():
         "user_info": user.to_dict() if user else None,
         "clicks_news_li":clicks_news_li
     }
+    # 2.显示新闻分类
+
 
     return  render_template('news/index.html',data =data)
 
