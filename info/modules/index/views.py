@@ -1,6 +1,6 @@
 from flask import render_template, send_file, current_app, redirect, session
 from info.modules.index import index_blu
-from info.models import User, News
+from info.models import User, News, Category
 from info import constants
 
 
@@ -28,13 +28,21 @@ def index():
     #     clicks_news_li.append(clicks_news_dict)
     # 列表推倒式
     clicks_news_li = [news_obj.to_basic_dict() for news_obj in clicks_news]
-
+    # 2.显示新闻分类
+    categorys = []
+    try:
+        categorys = Category.query.all()  # [obj,obj]
+    except Exception as e:
+        current_app.logger.error(e)
+    categorys_li = []
+    # [obj,obj] ---> [{},{}]
+    categorys_li = [category.to_dict() for category in categorys]
     # 如果user为空那么传一个None，如果不为空user.to_dict
     data = {
         "user_info": user.to_dict() if user else None,
-        "clicks_news_li":clicks_news_li
+        "clicks_news_li":clicks_news_li,
+        "categorys":categorys_li
     }
-    # 2.显示新闻分类
 
 
     return  render_template('news/index.html',data =data)
