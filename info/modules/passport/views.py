@@ -41,7 +41,7 @@ def login():
     if not user:
         return jsonify(errno=RET.NODATA, errmsg="用户不存在")
     if not user.check_passowrd(passport):
-        return jsonify(errno=RET.DATAERR, errmsg="密码是否错误")
+        return jsonify(errno=RET.DATAERR, errmsg="密码是错误")
 
     # 写入操作时间
     user.last_login = datetime.now()
