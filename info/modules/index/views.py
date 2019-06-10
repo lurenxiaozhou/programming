@@ -27,17 +27,19 @@ def get_news_list():
         current_app.logger.error(e)
         return  jsonify(errno = RET.PARAMERR,errmsg = "参数错误")
     # 3.查询出的新闻（要关系分类）（创建时间的排序）
+    filters = []
+    if cid != 1:
+        filters.append(News.category_id == cid)
+    # 把空列表变空  *[]解包
     try:
-        if cid == 1:
-            paginate=News.query.filter().order_by(News.create_time.desc()).paginate(page,per_page,False)
-        else:
-            paginate = News.query.filter(News.category_id == cid).order_by(News.create_time.desc()).paginate(page,per_page,False)
+        paginate=News.query.filter(*filters).order_by(News.create_time.desc()).paginate(page,per_page,False)
     except Exception as e:
         current_app.logger.error(e)
         return jsonify(errno = RET.DBERR,errmsg = "数据库查询错误")
     news_list = paginate.items # [obj,obj]
     current_page = paginate.page
     total_page = paginate.pages
+
     news_dict_li =[]
     for news in news_list:
         news_dict_li.append(news.to_basic_dict())

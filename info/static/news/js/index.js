@@ -56,6 +56,8 @@ function updateNewsData() {
     $.get("/news_list",params,function (response) {
         if (response.errno == "0") {
             //显示数据
+            // 清空原有数据
+            $(".list_con").html("")
             for (var i = 0; i < response.data.news_dict_li.length; i++) {
                 var news = response.data.news_dict_li[i]
                 var content = '<li>'
