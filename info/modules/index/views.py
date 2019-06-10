@@ -28,7 +28,10 @@ def get_news_list():
         return  jsonify(errno = RET.PARAMERR,errmsg = "参数错误")
     # 3.查询出的新闻（要关系分类）（创建时间的排序）
     try:
-        paginate=News.query.filter(News.category_id ==cid).order_by(News.create_time.desc()).paginate(page,per_page,False)
+        if cid == 1:
+            paginate=News.query.filter().order_by(News.create_time.desc()).paginate(page,per_page,False)
+        else:
+            paginate = News.query.filter(News.category_id == cid).order_by(News.create_time.desc()).paginate(page,per_page,False)
     except Exception as e:
         current_app.logger.error(e)
         return jsonify(errno = RET.DBERR,errmsg = "数据库查询错误")
