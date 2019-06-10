@@ -1,6 +1,6 @@
 from flask import current_app, session
 
-from info.models import User
+
 
 
 def do_index_class(index):
@@ -19,6 +19,8 @@ def user_login():
 
     if user_id:
         try:
+            from info.models import User
             user = User.query.get(user_id)
         except Exception as e:
             current_app.logger.error(e)
+    return user
