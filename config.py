@@ -22,6 +22,8 @@ class Config(object):
     SESSION_USE_SIGNER = True
     #设置保存时间两天
     PERMANENT_SESSION_LIFETIME = 86400 * 2
+    # 设置数据库默认提交
+    SQLALCHEMY_COMMIT_ON_TEARDOWN = True
 
 
 # 面向对象继承

@@ -24,14 +24,14 @@ def detail(news_id):
     clicks_news_li = [news.to_basic_dict() for news in clicks_news]
 
     # 2.显示新闻的具体信息
-    if not news_id:
-        abort(404) # 判断新闻id存不存在
-        # 类型是不是整数类型
-    try:
-        news_id = int(news_id)
-    except Exception as e:
-        current_app.logger.error(e)
-        abort(404)
+    # if not news_id:
+    #     abort(404) # 判断新闻id存不存在
+    #     # 类型是不是整数类型
+    # try:
+    #     news_id = int(news_id)
+    # except Exception as e:
+    #     current_app.logger.error(e)
+    #     abort(404)
     # 判断新闻是不是存在
     news = None
     try:
@@ -41,11 +41,12 @@ def detail(news_id):
 
     if not news:
         abort(404)
-
+    # 访问点击量加1
+    news.clicks += 1
 
     data = {
         "user_info":user.to_dict() if user else None,
         "clicks_news_li":clicks_news_li,
-        "news":news.to_basic_dict()
+        "news":news.to_dict()
     }
     return render_template("news/detail.html",data = data)
