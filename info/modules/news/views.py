@@ -55,7 +55,7 @@ def news_comment():
         db.session.rollback()
         current_app.logger.error(e)
         return jsonify(errno = RET.DBERR,errmsg = "数据库保存错误")
-    return jsonify(errno = RET.OK,errmsg = "OK")
+    return jsonify(errno = RET.OK,errmsg = "OK",data=comment.to_dict())
 
 
 
