@@ -44,9 +44,22 @@ def detail(news_id):
     # 访问点击量加1
     news.clicks += 1
 
+    # 详情页收藏是由is_collected控制的
+    is_collected = False
+    # 用户如果收藏了该新闻就让is_collected=True
+    # 1. 保证用户存在
+    # 2. 新闻肯定存在
+    # 3. 该条新闻在用户收藏新闻的列表中
+    # 4.用户收藏新闻的列表 -----》user.collection_news.all()  [news, news]
+    if user and news in user.collection_news.all():
+        is_collected = True
+
+
+
     data = {
         "user_info":user.to_dict() if user else None,
         "clicks_news_li":clicks_news_li,
-        "news":news.to_dict()
+        "news":news.to_dict(),
+        "is_collected":is_collected
     }
     return render_template("news/detail.html",data = data)
