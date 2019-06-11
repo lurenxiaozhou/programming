@@ -45,6 +45,7 @@ def detail(news_id):
 
     data = {
         "user_info":user.to_dict() if user else None,
-        "clicks_news_li":clicks_news_li
+        "clicks_news_li":clicks_news_li,
+        "news":news.to_basic_dict()
     }
     return render_template("news/detail.html",data = data)
