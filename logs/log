@@ -1748,3 +1748,9 @@ INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 12:31:35] "GET /static/news/ima
 INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 12:31:35] "GET /static/news/images/zan_icon.png HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 12:31:35] "GET /static/news/images/reply_icon.png HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 12:31:35] "GET /static/news/images/focus_icons.png HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 12:48:20] "GET /news/1086 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 12:48:20] "GET /favicon.ico HTTP/1.1" 200 -
