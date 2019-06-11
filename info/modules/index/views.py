@@ -1,4 +1,4 @@
-from flask import render_template,current_app,request, jsonify
+from flask import render_template, current_app, request, jsonify, g
 from info.modules.index import index_blu
 from info.models import  News, Category
 from info import constants
@@ -53,10 +53,11 @@ def get_news_list():
 
 
 @index_blu.route("/")
+@user_login
 def index():
     # 需求：首页右上角实现
     # 当我们进入到首页。我们需要判断用户是否登录，将用户信息查出来，渲染给index.html
-    user = user_login()
+    user = g.user
     #1.显示新闻列表
     clicks_news = []
     try:
