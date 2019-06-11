@@ -1,5 +1,5 @@
 from flask import current_app, session, g
-
+import functools
 
 def do_index_class(index):
     if index == 1:
@@ -25,7 +25,7 @@ def do_index_class(index):
 
 
 def user_login(func):
-
+    @functools.wraps(func)
     def wrapper(*args,**kwargs):
         user_id = session.get("user_id")
         user = None
