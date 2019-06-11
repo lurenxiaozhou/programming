@@ -1,4 +1,5 @@
 import constants
+from info import db
 from info.modules.news import news_blu
 from flask import render_template, session, current_app, g, abort, jsonify, request
 from info.utils.common import user_login
@@ -45,12 +46,18 @@ def news_collect():
     #收藏新闻和取消收藏
     if action == "collect":
         # 当去们去收藏当前新闻的时候要判断他是否已经收藏过了，收藏过就不在收藏
-        if news in user.collection_news:
+        if news not in user.collection_news:
             user.collection_news.append(news)
     else:
         # 当去取消的时候判断他是否在收藏列表中，
         if news in user.collection_news:
             user.collection_news.remove(news)
+    try:
+        db.session.commit()
+    except Exception as e:
+        current_app.logger.error(e)
+        db.session.rollback()
+        return jsonify(errno=RET.DBERR, errmsg="保存失败")
     return jsonify(errno = RET.OK,errmsg = "OK")
 
 
