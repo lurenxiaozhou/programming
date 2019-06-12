@@ -149,8 +149,10 @@ $(function(){
                             // 更新点赞按钮图标
                             if (action == "add") {
                                 // 代表是点赞
+                                like_count = parseInt(like_count) + 1
                                 $this.addClass('has_comment_up')
                             }else {
+                                like_count = parseInt(like_count) - 1
                                 $this.removeClass('has_comment_up')
                             }
                         }else if (resp.errno == "4101"){
@@ -214,7 +216,7 @@ $(function(){
                         comment_html += '</div>'
                         comment_html += '<div class="comment_time fl">' + comment.create_time + '</div>'
 
-                        comment_html += '<a href="javascript:;" class="comment_up fr" data-commentid="' + comment.id + '" data-newsid="' + comment.news_id + '">赞</a>'
+                        comment_html += '<a href="javascript:;" class="comment_up fr" data-commentid="' + comment.id +'" data-likecount="' + comment.like_count +  '" data-newsid="' + comment.news_id + '">赞</a>'
                         comment_html += '<a href="javascript:;" class="comment_reply fr">回复</a>'
                         comment_html += '<form class="reply_form fl" data-commentid="' + comment.id + '" data-newsid="' + news_id + '">'
                         comment_html += '<textarea class="reply_input"></textarea>'

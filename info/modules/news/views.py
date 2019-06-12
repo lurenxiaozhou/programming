@@ -46,7 +46,7 @@ def set_comment_like():
     if not comment_obj:
         return jsonify(errno = RET.NODATA,errmsg = "该条评论不存在")
 
-    comment_like_obj = Comment.query.filter_by(comment_id=comment_id,user_id = user.id).first()
+    comment_like_obj = CommentLike.query.filter_by(comment_id=comment_id,user_id = user.id).first()
     # 业务逻辑
     if action == "add":
         if not comment_like_obj:
@@ -240,7 +240,27 @@ def detail(news_id):
     except Exception as e:
         current_app.logger.error(e)
 
-    comments_dict_li = [comment.to_dict() for comment in comments]
+    # comments_dict_li = [comment.to_dict() for comment in comments]
+    comment_like_ids =[]
+    if user:
+        comment_ids = [comment.id for comment in comments]
+        comment_likes = CommentLike.query.filter(CommentLike.user_id == user.id,CommentLike.comment_id.in_(comment_ids)).all()
+        comment_like_ids = [comment_like.comment_id for comment_like in comment_likes]
+
+    comments_dict_li=[]
+    for comment in comments:
+        comment_dict = comment.to_dict()
+        comment_dict["is_like"] = False
+        # 如果comment_dict["is_like"] = True代表以赞
+        # 如果该条评论的id在我的点赞评论id列表中
+        if comment.id in comment_like_ids:
+            comment_dict["is_like"] = True
+        comments_dict_li.append(comment_dict)
+
+
+
+
+
 
 
     data = {
