@@ -89,6 +89,7 @@ $(function(){
                     $('.comment_sub').blur();
                     // 清空输入框内容
                     $(".comment_input").val("")
+                    updatecommentcount()
                 }else {
                     alert(resp.errmsg)
                 }
@@ -122,7 +123,7 @@ $(function(){
                 $this.addClass('has_comment_up')
             }
         }
-
+            // 子回复
         if(sHandler.indexOf('reply_sub')>=0)
         {
             var $this = $(this)
@@ -186,6 +187,7 @@ $(function(){
                         $this.prev().val('')
                         // 关闭
                         $this.parent().hide()
+                        updatecommentcount()
                     }else {
                         alert(resp.errmsg)
                     }
@@ -238,3 +240,10 @@ function get_ajax(params) {
 }
 
 
+function updatecommentcount() {
+    // 获取新闻条数
+    var num = $(".comment_list").length
+
+    // 重写html
+    $(".comment_count").html(num+"条评论")
+}
