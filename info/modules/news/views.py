@@ -31,6 +31,8 @@ def news_comment():
         return jsonify(errno = RET.PARAMERR,errmsg = "参数错误")
     try:
         news_id = int(news_id)
+        if parent_id:
+            parent_id = int(parent_id)
     except Exception as e:
         current_app.logger.error(e)
         return jsonify(errno = RET.PARAMERR,errmsg = "参数类型错误")
@@ -169,12 +171,21 @@ def detail(news_id):
     if user and news in user.collection_news.all():
         is_collected = True
 
+    #  查询出当前新闻的评论
+    comments = []
+    try:
+        comments = Comment.query.filter(Comment.news_id == news_id).order_by(Comment.create_time.desc()).all()
+    except Exception as e:
+        current_app.logger.error(e)
+
+    comments_dict_li = [comment.to_dict() for comment in comments]
 
 
     data = {
         "user_info":user.to_dict() if user else None,
         "clicks_news_li":clicks_news_li,
         "news":news.to_dict(),
-        "is_collected":is_collected
+        "is_collected":is_collected,
+        "comments_dict_li":comments_dict_li
     }
     return render_template("news/detail.html",data = data)
