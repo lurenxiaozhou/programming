@@ -3,8 +3,77 @@ from info import db
 from info.modules.news import news_blu
 from flask import render_template, session, current_app, g, abort, jsonify, request
 from info.utils.common import user_login
-from info.models import News, Comment
+from info.models import News, Comment,CommentLike
 from utils.response_code import RET
+
+
+@news_blu.route('/comment_like',methods = ["POST"])
+@user_login
+def set_comment_like():
+    """
+    点赞和取消点赞
+    1.接收参数 comment_id action
+    2.效验参数
+    3.CommentLike()往点赞的表中添加或删除一条数据
+    4.返回响应
+    :return:
+    """
+    user = g.user
+    if not user:
+        return jsonify(errno=RET.SESSIONERR, errmsg="用户未登录")
+
+    comment_id = request.json.get("comment_id")
+    action = request.json.get("action")
+
+    if not all([comment_id,action]):
+        return jsonify(errno=RET.PARAMERR, errmsg="参数不完整")
+
+    if not action in ['add','remove']:
+        return jsonify(errno = RET.PARAMERR,errmsg = "参数错误")
+
+    try:
+        comment_id = int(comment_id)
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno = RET.PARAMERR,errmsg = "参数错误")
+
+    try:
+        comment_obj = Comment.query.get(comment_id)
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno = RET.DBERR,errmsg = "数据库查询错误")
+
+    if not comment_obj:
+        return jsonify(errno = RET.NODATA,errmsg = "该条评论不存在")
+
+    comment_like_obj = Comment.query.filter_by(comment_id=comment_id,user_id = user.id).first()
+    # 业务逻辑
+    if action == "add":
+        if not comment_like_obj:
+            # 点赞
+            comment_like = CommentLike()
+            comment_like.comment_id = comment_id
+            comment_like.user_id = user.id
+            db.session.add(comment_like)
+            comment_obj.like_count += 1
+    else:
+        # 如果点赞存在，才删除
+        if comment_like_obj:
+            db.session.remove(comment_like_obj)
+            comment_obj.like_count -= 1
+
+    try:
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        current_app.logger.error(e)
+        return jsonify(errno = RET.DBERR,errmsg = "数据库操作失败")
+
+    return jsonify(errno = RET.OK,errmsg = "OK")
+
+
+
+
 
 
 @news_blu.route('/news_comment',methods=["POST"])
@@ -58,13 +127,6 @@ def news_comment():
         current_app.logger.error(e)
         return jsonify(errno = RET.DBERR,errmsg = "数据库保存错误")
     return jsonify(errno = RET.OK,errmsg = "OK",data=comment.to_dict())
-
-
-
-
-
-
-
 
 
 @news_blu.route('/news_collect',methods=["POST"])
