@@ -114,9 +114,6 @@ $(function(){
 
         if(sHandler.indexOf('comment_up')>=0)
         {
-            var $this = $(this);
-            if(sHandler.indexOf('has_comment_up')>=0)
-            {
                 // 如果当前该评论已经是点赞状态，再次点击会进行到此代码块内，代表要取消点赞
                 // 取消点赞操作
                 // $this.removeClass('has_comment_up')
@@ -147,6 +144,7 @@ $(function(){
                     success: function (resp) {
                         if (resp.errno == "0") {
                             // 更新点赞按钮图标
+                            var like_count =$this.attr("data-likecount")
                             if (action == "add") {
                                 // 代表是点赞
                                 like_count = parseInt(like_count) + 1
@@ -155,6 +153,13 @@ $(function(){
                                 like_count = parseInt(like_count) - 1
                                 $this.removeClass('has_comment_up')
                             }
+                             // 更新点赞数据
+                            $this.attr('data-likecount', like_count)
+                            if (like_count == 0) {
+                                $this.html("赞")
+                            }else {
+                                $this.html(like_count)
+                            }
                         }else if (resp.errno == "4101"){
                             $('.login_form_con').show();
                         }else {
@@ -162,10 +167,8 @@ $(function(){
                         }
                     }
                 })
-            }else {
-                $this.addClass('has_comment_up')
-            }
         }
+
             // 子回复
         if(sHandler.indexOf('reply_sub')>=0)
         {

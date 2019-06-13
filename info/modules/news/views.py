@@ -59,7 +59,7 @@ def set_comment_like():
     else:
         # 如果点赞存在，才删除
         if comment_like_obj:
-            db.session.remove(comment_like_obj)
+            db.session.delete(comment_like_obj)
             comment_obj.like_count -= 1
 
     try:
