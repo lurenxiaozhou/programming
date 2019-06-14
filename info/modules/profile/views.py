@@ -5,7 +5,36 @@ from info import db
 from info.modules.profile import profile_blu
 from info.utils.common import user_login
 from info.libs.image_storage import storage
+from info.models import Category
 from utils.response_code import RET
+
+
+@profile_blu.route('/user_news_release',methods = ["GET","POST"])
+@user_login
+def user_news_release():
+    """
+    用户发布新闻
+    :return:
+    """
+    if request.method == "GET":
+        user = g.user
+        categorys = Category.query.all()
+        categorys_dict_li = [category.to_dict() for category in categorys]
+        categorys_dict_li.pop(0)
+        data={
+            "categorys_dict_li":categorys_dict_li
+        }
+        return render_template("news/user_news_release.html",data = data)
+    
+
+
+
+
+
+
+
+
+
 
 
 @profile_blu.route('/user_collection')
@@ -44,19 +73,6 @@ def user_collection():
         "total_page":total_page
     }
     return render_template("news/user_collection.html",data = data)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @profile_blu.route("/user_pass_info",methods = ["GET","POST"])
