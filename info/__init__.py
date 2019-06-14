@@ -1,14 +1,14 @@
 import logging
 from logging.handlers import RotatingFileHandler
 
-from flask import Flask
+from flask import Flask, g,render_template
 from config import config
 from flask_sqlalchemy import SQLAlchemy
 from redis import  StrictRedis
 from flask_wtf.csrf import CSRFProtect,generate_csrf
 from flask_session import Session
 
-from info.utils.common import do_index_class
+from info.utils.common import do_index_class, user_login
 
 
 def set_log(config_name):
@@ -64,4 +64,12 @@ def create_app(config_name):
     app.register_blueprint(profile_blu)
     # 添加过滤器
     app.add_template_filter(do_index_class,"index_class")
+    # 捕获404
+    @app.errorhandler(404)
+    @user_login
+    def get_404_error(e):
+        data = {
+            "user_info":g.user.to_dict() if g.user else None
+        }
+        return render_template("news/404.html",data=data)
     return app

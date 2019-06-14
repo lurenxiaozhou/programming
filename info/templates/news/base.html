@@ -69,6 +69,7 @@
         </div>
     </div>
     <div class="footer">
+        {% block bottomBlock %}
         <div class="footer_links">
             <a href="">关于我们</a>
             <span>|</span>
@@ -80,8 +81,10 @@
         </div>
         <p class="copyright">
             CopyRight © 2018 新经资讯信息技术有限公司 All Rights Reserved<br />
-电话：010-****888    京ICP备*******8号
+        电话：010-****888    京ICP备*******8号
         </p>
+        {% endblock %}
+
     </div>
 
     <!-- 登录表单 -->
