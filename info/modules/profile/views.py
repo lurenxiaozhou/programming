@@ -8,6 +8,29 @@ from info.libs.image_storage import storage
 from utils.response_code import RET
 
 
+@profile_blu.route('/user_collection')
+@user_login
+def user_collection():
+    """
+    收藏页面
+    :return:
+    """
+    return render_template("news/user_collection.html")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @profile_blu.route("/user_pass_info",methods = ["GET","POST"])
 @user_login
 def user_pass_info():
