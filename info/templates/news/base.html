@@ -26,7 +26,7 @@
             {% if data.user_info %}
                <div class="user_login fr">
                 <img src="{% if data.user_info.avatar_url %}{{ data.user_info.avatar_url }}{% else %}../../static/news/images/person01.png{% endif %}" class="lgin_pic">
-                <a href="#">{{ data.user_info.nick_name }}</a>
+                <a href="/user/info">{{ data.user_info.nick_name }}</a>
                 <a href="javascript:;" onclick="logout()">退出</a>
             </div>
             {% else %}
@@ -47,6 +47,7 @@
         {% block authorBlock %}
 
         {% endblock %}
+        {% block rankBlock %}
             <div class="rank_title">
                 <h3>点击排行</h3>
             </div>
@@ -63,6 +64,8 @@
 {#                <li><span>5</span><a href="#">凛冬已至，还有多少银行人在假装干银行</a></li>#}
 {#                <li><span>6</span><a href="#">人民日报：部分城市楼市放松限制引关注，楼市调控不会“拉抽屉”</a></li>#}
             </ul>
+        {% endblock %}
+
         </div>
     </div>
     <div class="footer">
