@@ -8,6 +8,24 @@ from info.libs.image_storage import storage
 from utils.response_code import RET
 
 
+@profile_blu.route("/user_pass_info",methods = ["GET","POST"])
+@user_login
+def user_pass_info():
+    """
+    修改密码
+    :return:
+    """
+    user = g.user
+
+    if request.method == "GET":
+        return render_template("news/user_pass_info.html")
+
+    
+
+
+
+
+
 @profile_blu.route('/user/user_pic_info',methods = ["GET","POST"])
 @user_login
 def user_pic_info():
