@@ -5,7 +5,7 @@ from info import db
 from info.modules.profile import profile_blu
 from info.utils.common import user_login
 from info.libs.image_storage import storage
-from info.models import Category
+from info.models import Category, News
 from utils.response_code import RET
 
 
@@ -16,8 +16,8 @@ def user_news_release():
     用户发布新闻
     :return:
     """
+    user = g.user
     if request.method == "GET":
-        user = g.user
         categorys = Category.query.all()
         categorys_dict_li = [category.to_dict() for category in categorys]
         categorys_dict_li.pop(0)
@@ -25,16 +25,49 @@ def user_news_release():
             "categorys_dict_li":categorys_dict_li
         }
         return render_template("news/user_news_release.html",data = data)
-    
 
+    title = request.form.get("title")
+    category_id = request.form.get("category_id")
+    digest = request.form.get("digest")
+    index_image = request.form.get("index_image")
+    content = request.form.get("content")
 
+    if not all([title,category_id,digest,index_image,content]):
+        return jsonify(errno=RET.PARAMERR, errmsg="参数不全")
 
+    try:
+        category_id = int(category_id)
+        image_data = index_image.read()
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno=RET.PARAMERR, errmsg="参数错误")
 
+    try:
+        key = storage(image_data)
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno=RET.THIRDERR, errmsg="上传错误")
 
+    # 写入数据库
+    news = News()
+    news.title = title
+    news.source = "个人发布"
+    news.digest = digest
+    news.content = content
+    news.index_image_url = constants.QINIU_DOMIN_PREFIX+key
+    news.category_id = category_id
+    news.user_id = user.id
+    news.status =1
 
+    try:
+        db.session.add(news)
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        current_app.logger.error(e)
+        return jsonify(errno=RET.DBERR, errmsg="数据库错误")
 
-
-
+    return jsonify(errno=RET.OK, errmsg="OK")
 
 
 @profile_blu.route('/user_collection')
