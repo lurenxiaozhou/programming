@@ -9,6 +9,57 @@ from info.models import Category, News
 from utils.response_code import RET
 
 
+@profile_blu.route('/user_news_list')
+@user_login
+def user_news_list():
+    """
+    新闻列表
+    :return:
+    """
+    user = g.user
+    page = request.args.get("page")
+
+    try:
+        page = int(page)
+    except Exception as e:
+        current_app.logger.error(e)
+        page = 1
+
+    # 查询
+    news_list = []
+    current_page = 1
+    total_page = 1
+    try:
+        paginate = user.news_list.paginate(page, constants.OTHER_NEWS_PAGE_MAX_COUNT, False)
+        news_list = paginate.items
+        current_page = paginate.page
+        total_page = paginate.pages
+    except Exception as e:
+        current_app.logger.error(e)
+
+    news_dict_li = [news.to_review_dict() for news in news_list]
+
+    data = {
+        "news_dict_li": news_dict_li,
+        "current_page": current_page,
+        "total_page": total_page
+    }
+    return render_template("news/user_news_list.html", data=data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @profile_blu.route('/user_news_release',methods = ["GET","POST"])
 @user_login
 def user_news_release():
