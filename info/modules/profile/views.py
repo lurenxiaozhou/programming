@@ -41,7 +41,7 @@ def user_base_info():
         db.session.rollback()
         current_app.logger.error(e)
         return jsonify(errno=RET.PARAMERR, errmsg="参数错误")
-    
+
     return jsonify(errno=RET.OK, errmsg="OK",data = user.to_dict())
 
 
