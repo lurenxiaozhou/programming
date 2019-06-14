@@ -20,10 +20,24 @@ def user_pass_info():
     if request.method == "GET":
         return render_template("news/user_pass_info.html")
 
-    
+    old_password = request.json.get("old_password")
+    new_password = request.json.get("new_password")
 
+    if not all([old_password,new_password]):
+        return jsonify(errno=RET.PARAMERR, errmsg="参数不全")
 
+    if not user.check_passowrd(old_password):
+        return jsonify(errno=RET.DATAERR, errmsg="密码错误")
 
+    user.password = new_password
+    try:
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        current_app.logger.error(e)
+        return jsonify(errno=RET.DBERR, errmsg="数据库提交错误")
+
+    return jsonify(errno=RET.OK, errmsg="OK")
 
 
 @profile_blu.route('/user/user_pic_info',methods = ["GET","POST"])
