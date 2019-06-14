@@ -15,7 +15,35 @@ def user_collection():
     收藏页面
     :return:
     """
-    return render_template("news/user_collection.html")
+    user = g.user
+    page = request.args.get("page")
+
+    try:
+        page = int(page)
+    except Exception as e:
+        current_app.logger.error(e)
+        page = 1
+
+    # 查询该用户收藏了多少新闻
+    news_list = []
+    current_page = 1
+    total_page = 1
+    try:
+        paginate = user.collection_news.paginate(page,constants.USER_COLLECTION_MAX_NEWS,False)
+        news_list = paginate.items
+        current_page = paginate.page
+        total_page = paginate.pages
+    except Exception as e:
+        current_app.logger.error(e)
+
+    news_dict_li = [news.to_dict() for news in news_list]
+
+    data={
+        "news_dict_li":news_dict_li,
+        "current_page":current_page,
+        "total_page":total_page
+    }
+    return render_template("news/user_collection.html",data = data)
 
 
 

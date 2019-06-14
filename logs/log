@@ -3091,3 +3091,59 @@ INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 18:53:49] "GET /static/news/css
 INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 18:53:49] "GET /static/news/js/jquery.pagination.min.js HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 18:53:50] "GET /static/news/images/clock.png HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 18:53:50] "GET /user/user_collection HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:04] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:04] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:04] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:04] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:04] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:04] "GET /static/news/js/jquery.form.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:04] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:04] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:04] "GET /static/news/images/user_pic.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:04] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:04] "GET /user/user_base_info HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:04] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:04] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:05] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:05] "GET /static/news/js/user_base_info.js HTTP/1.1" 200 -
+ERROR views.py:24 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:08] "GET /user/user_collection HTTP/1.1" 200 -
+ERROR views.py:24 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:08] "GET /user/user_collection HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:08] "GET /static/news/css/jquery.pagination.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:08] "GET /static/news/js/jquery.pagination.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:11:08] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:35] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:35] "GET /user/user_base_info HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:35] "GET /favicon.ico HTTP/1.1" 200 -
+ERROR views.py:24 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:38] "GET /user/user_collection HTTP/1.1" 200 -
+ERROR views.py:24 int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:38] "GET /user/user_collection HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:39] "GET /user/user_collection?page=2 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:41] "GET /user/user_collection?page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:42] "GET /user/user_collection?page=2 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:44] "GET /user/user_collection?page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:46] "GET /user/user_collection?page=2 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:48] "GET /user/user_collection?page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:49] "GET /user/user_collection?page=2 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:50] "GET /user/user_collection?page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:51] "GET /user/user_collection?page=2 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:52] "GET /user/user_collection?page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:55] "GET /user/user_collection?page=2 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:12:57] "GET /user/user_collection?page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:13:05] "GET /user/user_collection?page=2 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:13:06] "GET /user/user_collection?page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:13:08] "GET /user/user_collection?page=2 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:13:09] "GET /user/user_collection?page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:13:10] "GET /user/user_collection?page=2 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:13:12] "GET /user/user_collection?page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:13:14] "GET /user/user_collection?page=2 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:13:15] "GET /user/user_collection?page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:13:16] "GET /user/user_collection?page=2 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:13:18] "GET /user/user_collection?page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [14/Jun/2019 19:13:26] "GET /user/user_collection?page=2 HTTP/1.1" 200 -
