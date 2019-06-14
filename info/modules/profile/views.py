@@ -29,9 +29,9 @@ def user_news_release():
     title = request.form.get("title")
     category_id = request.form.get("category_id")
     digest = request.form.get("digest")
-    index_image = request.form.get("index_image")
+    index_image = request.files.get("index_image")
     content = request.form.get("content")
-
+    print(index_image)
     if not all([title,category_id,digest,index_image,content]):
         return jsonify(errno=RET.PARAMERR, errmsg="参数不全")
 
