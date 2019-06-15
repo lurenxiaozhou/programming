@@ -3791,3 +3791,14 @@ INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:13:28] "GET /admin/news_revi
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:13:39] "GET /admin/news_review_detail?news_id=1 HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:13:41] "POST /admin/news_review_detail HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:13:41] "GET /admin/news_review?p=1 HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:28:03] "GET /admin/index HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:28:05] "GET /admin/user_count HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:28:06] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:28:08] "GET /admin/news_edit HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:28:15] "GET /admin/news_edit?p=2 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:28:16] "GET /admin/news_edit?p=4 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:28:19] "GET /admin/news_edit?p=1 HTTP/1.1" 200 -
