@@ -5,6 +5,13 @@ from flask import render_template, request, current_app, session, redirect, url_
 from info.models import User
 
 
+@admin_blu.route('/user_count')
+def user_count():
+    return render_template('admin/user_count.html')
+
+
+
+
 @admin_blu.route('/index')
 @user_login
 def index():
@@ -16,19 +23,6 @@ def index():
         "user_info":g.user.to_dict()
     }
     return render_template("admin/index.html",data=data)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @admin_blu.route("/login",methods = ["GET","POST"])
