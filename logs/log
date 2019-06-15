@@ -3919,3 +3919,13 @@ INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:51:50] "GET /admin/news_edit
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:51:50] "GET /admin/news_edit?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:51:54] "GET /admin/news_edit HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:51:57] "GET /admin/news_edit?keywords=66666 HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:00:08] "GET /admin/index HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:00:10] "GET /admin/user_count HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:00:11] "GET /admin/news_category HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:00:11] "GET /static/admin/js/news_type.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:00:11] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:00:15] "GET /admin/news_category HTTP/1.1" 200 -
