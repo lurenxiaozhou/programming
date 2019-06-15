@@ -3623,3 +3623,48 @@ INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:31:15] "GET /static/news/ima
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:31:17] "GET /admin/index HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:31:19] "GET /admin/user_count HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:31:25] "GET /admin/user_count HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:39:20] "GET /admin/index HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:39:20] "GET /admin/index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:39:20] "GET /admin/index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:39:20] "GET /admin/index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:39:22] "GET /admin/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:39:22] "GET /admin/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:39:25] "GET /admin/index HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:39:26] "GET /admin/user_count HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:39:26] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:39:28] "GET /admin/user_count HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:39:28] "GET /admin/user_list HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:05] "GET /admin/index HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:06] "GET /admin/user_count HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:07] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:09] "GET /admin/user_count HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:09] "GET /admin/user_list HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:13] "GET /admin/index HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:13] "GET /static/admin/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:13] "GET /static/admin/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:13] "GET /static/admin/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:13] "GET /static/admin/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:13] "GET /static/admin/images/person.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:14] "GET /admin/user_count HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:14] "GET /static/admin/images/icons.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:14] "GET /static/admin/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:14] "GET /static/admin/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:14] "GET /static/admin/js/echarts.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:17] "GET /admin/user_list HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:17] "GET /static/admin/css/jquery.pagination.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:17] "GET /static/admin/js/jquery.pagination.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:18] "GET /admin/user_list HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:19] "GET /admin/index HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:20] "GET /admin/user_count HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:20] "GET /admin/user_list HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:20] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:23] "GET /admin/user_list?p=2 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:41:25] "GET /admin/user_list?p=3 HTTP/1.1" 200 -
