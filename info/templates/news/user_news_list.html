@@ -36,7 +36,7 @@
                 currentPage: {{ data.current_page }},
                 totalPage: {{ data.total_page }},
                 callback: function(current) {
-                    window.location.href = '/user/user_news_list?p=' + current
+                    window.location.href = '/user/user_news_list?page=' + current
                 }
             });
         });

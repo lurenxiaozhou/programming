@@ -44,6 +44,7 @@ def user_news_list():
         "current_page": current_page,
         "total_page": total_page
     }
+    print(news_list)
     return render_template("news/user_news_list.html", data=data)
 
 
