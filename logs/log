@@ -3929,3 +3929,57 @@ INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:00:11] "GET /admin/news_cate
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:00:11] "GET /static/admin/js/news_type.js HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:00:11] "GET /favicon.ico HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:00:15] "GET /admin/news_category HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:06:54] "GET /admin/index HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:06:54] "GET /static/admin/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:06:54] "GET /static/admin/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:06:54] "GET /static/admin/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:06:54] "GET /static/admin/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:06:54] "GET /static/admin/images/person.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:06:56] "GET /admin/user_count HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:06:56] "GET /static/admin/images/icons.png HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:06:56] "GET /admin/user_count?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:06:56] "GET /admin/user_count?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:06:56] "GET /admin/user_count?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:06:56] "GET /admin/user_count?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:01] "GET /static/admin/images/icons.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:03] "GET /admin/news_category HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:03] "GET /static/admin/js/news_type.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:05] "GET /admin/index HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:07] "GET /admin/user_count HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:07] "GET /static/admin/js/echarts.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:07] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:08] "GET /admin/news_category HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:16] "POST /admin/add_category HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:16] "GET /admin/news_category HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:19] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:19] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:19] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:19] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:19] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:19] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:19] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:19] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:19] "GET /static/news/images/news_pic.jpg HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:19] "GET /static/news/images/person.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:19] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:19] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:19] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:19] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:20] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:26] "POST /admin/add_category HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:26] "GET /admin/news_category HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:29] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:29] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:30] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:37] "POST /admin/add_category HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:37] "GET /admin/news_category HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:39] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:39] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:39] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:42] "GET /news_list?cid=7&page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:43] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:53] "GET /admin/news_category HTTP/1.1" 200 -
