@@ -1,16 +1,21 @@
+from info import user_login
 from info.modules.admin import admin_blu
-from flask import render_template, request, current_app, session, redirect, url_for
+from flask import render_template, request, current_app, session, redirect, url_for, g
 
 from info.models import User
 
 
 @admin_blu.route('/index')
+@user_login
 def index():
     """
     首页逻辑
     :return:
     """
-    return render_template("admin/index.html")
+    data={
+        "user_info":g.user.to_dict()
+    }
+    return render_template("admin/index.html",data=data)
 
 
 
@@ -33,6 +38,11 @@ def login():
     :return:
     """
     if request.method == "GET":
+        # 在get请求中，先从session中取出user_id和is_admin如果能取到值，直接重定向到首页
+        user_id = session.get("user_id")
+        is_admin = session.get("is_admin")
+        if user_id and is_admin:
+            return redirect("admin.index")
         return render_template("admin/login.html")
 
     username = request.form.get("username")
