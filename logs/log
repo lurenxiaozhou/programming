@@ -3609,3 +3609,17 @@ INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 14:02:38] "GET /favicon.ico HTT
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 14:02:39] "GET /admin/user_count HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 14:02:41] "GET /admin/user_count HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 14:02:48] "GET /admin/user_count HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:31:15] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:31:15] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:31:15] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:31:15] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:31:15] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:31:15] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:31:15] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:31:17] "GET /admin/index HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:31:19] "GET /admin/user_count HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:31:25] "GET /admin/user_count HTTP/1.1" 200 -
