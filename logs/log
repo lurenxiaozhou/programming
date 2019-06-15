@@ -3703,3 +3703,24 @@ INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:53:59] "GET /favicon.ico HTT
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:54:01] "GET /admin/news_review HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:54:03] "GET /admin/news_review HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:54:13] "GET /admin/news_review?keywords=黄金 HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:59:15] "GET /admin/index HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:59:16] "GET /admin/user_count HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:59:17] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:59:18] "GET /admin/news_review HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:59:19] "GET /admin/news_review_detail?news_id=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:59:19] "GET /static/admin/tinymce/js/tinymce/tinymce.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:59:19] "GET /static/admin/js/news_review_detail.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:59:19] "GET /static/admin/tinymce/js/tinymce/themes/modern/theme.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:59:19] "GET /static/admin/tinymce/js/tinymce/langs/zh_CN.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:59:20] "GET /static/admin/tinymce/js/tinymce/skins/lightgray/skin.min.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:59:20] "GET /static/admin/tinymce/js/tinymce/skins/lightgray/content.min.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:59:20] "GET /static/admin/tinymce/js/tinymce/skins/lightgray/fonts/tinymce.woff HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 19:59:40] "GET /admin/news_review_detail?news_id=3 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:00:08] "GET /admin/news_review HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:00:20] "GET /admin/news_review HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:00:41] "GET /admin/news_review_detail?news_id=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 20:00:46] "GET /admin/news_review HTTP/1.1" 200 -

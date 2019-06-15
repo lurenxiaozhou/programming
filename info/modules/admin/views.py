@@ -1,35 +1,78 @@
 import datetime
 
-from info import constants
+from info import constants, db
 from info import user_login
 from info.modules.admin import admin_blu
-from flask import render_template, request, current_app, session, redirect, url_for, g
+from flask import render_template, request, current_app, session, redirect, url_for, g, jsonify
 
 from info.models import User, News
+from info.utils.response_code import RET
 
 
-@admin_blu.route('/news_review_detail')
+@admin_blu.route('/news_review_detail', methods=["GET", "POST"])
 def news_review_detail():
     """新闻审核"""
+    if request.method == "GET":
+        # 获取新闻id
+        news_id = request.args.get("news_id")
+        if not news_id:
+            return render_template('admin/news_review_detail.html', data={"errmsg": "未查询到此新闻"})
 
-    # 获取新闻id
-    news_id = request.args.get("news_id")
-    if not news_id:
-        return render_template('admin/news_review_detail.html', data={"errmsg": "未查询到此新闻"})
+        # 通过id查询新闻
+        news = None
+        try:
+            news = News.query.get(news_id)
+        except Exception as e:
+            current_app.logger.error(e)
 
-    # 通过id查询新闻
+        if not news:
+            return render_template('admin/news_review_detail.html', data={"errmsg": "未查询到此新闻"})
+
+        # 返回数据
+        data = {"news": news.to_dict()}
+        return render_template('admin/news_review_detail.html', data=data)
+
+    # 执行审核操作
+
+    # 1.获取参数
+    news_id = request.json.get("news_id")
+    action = request.json.get("action")
+
+    # 2.判断参数
+    if not all([news_id, action]):
+        return jsonify(errno=RET.PARAMERR, errmsg="参数错误")
+    if action not in ("accept", "reject"):
+        return jsonify(errno=RET.PARAMERR, errmsg="参数错误")
+
     news = None
     try:
+        # 3.查询新闻
         news = News.query.get(news_id)
     except Exception as e:
         current_app.logger.error(e)
 
     if not news:
-        return render_template('admin/news_review_detail.html', data={"errmsg": "未查询到此新闻"})
+        return jsonify(errno=RET.NODATA, errmsg="未查询到数据")
 
-    # 返回数据
-    data = {"news": news.to_dict()}
-    return render_template('admin/news_review_detail.html', data=data)
+    # 4.根据不同的状态设置不同的值
+    if action == "accept":
+        news.status = 0
+    else:
+        # 拒绝通过，需要获取原因
+        reason = request.json.get("reason")
+        if not reason:
+            return jsonify(errno=RET.PARAMERR, errmsg="参数错误")
+        news.reason = reason
+        news.status = -1
+
+    # 保存数据库
+    try:
+        db.session.commit()
+    except Exception as e:
+        current_app.logger.error(e)
+        db.session.rollback()
+        return jsonify(errno=RET.DBERR, errmsg="数据保存失败")
+    return jsonify(errno=RET.OK, errmsg="操作成功")
 
 
 @admin_blu.route('/news_review')
