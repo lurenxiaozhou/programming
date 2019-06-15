@@ -8,6 +8,30 @@ from flask import render_template, request, current_app, session, redirect, url_
 from info.models import User, News
 
 
+@admin_blu.route('/news_review_detail')
+def news_review_detail():
+    """新闻审核"""
+
+    # 获取新闻id
+    news_id = request.args.get("news_id")
+    if not news_id:
+        return render_template('admin/news_review_detail.html', data={"errmsg": "未查询到此新闻"})
+
+    # 通过id查询新闻
+    news = None
+    try:
+        news = News.query.get(news_id)
+    except Exception as e:
+        current_app.logger.error(e)
+
+    if not news:
+        return render_template('admin/news_review_detail.html', data={"errmsg": "未查询到此新闻"})
+
+    # 返回数据
+    data = {"news": news.to_dict()}
+    return render_template('admin/news_review_detail.html', data=data)
+
+
 @admin_blu.route('/news_review')
 def news_review():
     """返回待审核新闻列表"""
