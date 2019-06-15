@@ -13,6 +13,7 @@ def news_review():
     """返回待审核新闻列表"""
 
     page = request.args.get("p", 1)
+    keywords = request.args.get("keywords", "")
     try:
         page = int(page)
     except Exception as e:
@@ -24,7 +25,13 @@ def news_review():
     total_page = 1
 
     try:
-        paginate = News.query.filter(News.status != 0) \
+        filters = [News.status != 0]
+        # 如果有关键词
+        if keywords:
+            # 添加关键词的检索选项
+            filters.append(News.title.contains(keywords))
+        # 查询
+        paginate = News.query.filter(*filters) \
             .order_by(News.create_time.desc()) \
             .paginate(page, constants.ADMIN_NEWS_PAGE_MAX_COUNT, False)
 
