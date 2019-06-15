@@ -2,7 +2,7 @@ from flask import render_template, current_app, request, jsonify, g
 from info.modules.index import index_blu
 from info.models import  News, Category
 from info import constants
-from utils.response_code import RET
+from info.utils.response_code import RET
 from info.utils.common import user_login
 
 @index_blu.route('/news_list')

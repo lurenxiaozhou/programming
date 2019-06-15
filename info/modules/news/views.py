@@ -1,10 +1,10 @@
-import constants
-from info import db
+
+from info import db,constants
 from info.modules.news import news_blu
 from flask import render_template, session, current_app, g, abort, jsonify, request
 from info.utils.common import user_login
 from info.models import News, Comment,CommentLike
-from utils.response_code import RET
+from info.utils.response_code import RET
 
 
 @news_blu.route('/comment_like',methods = ["POST"])

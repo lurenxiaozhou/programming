@@ -6,7 +6,7 @@ from info.modules.profile import profile_blu
 from info.utils.common import user_login
 from info.libs.image_storage import storage
 from info.models import Category, News
-from utils.response_code import RET
+from info.utils.response_code import RET
 
 
 @profile_blu.route('/user_news_list')

@@ -2,16 +2,16 @@ import random
 import re
 from datetime import datetime
 
-import constants
-from info import redis_store, db
+
+from info import redis_store, db,constants
 from info.modules.passport import passport_blu
 from flask import request, abort, current_app, make_response, jsonify, session
 
-from libs.yuntongxun.sms import CCP
+from info.libs.yuntongxun.sms import CCP
 from info.models import User
 
-from utils.captcha.captcha import captcha
-from utils.response_code import RET
+from info.utils.captcha.captcha import captcha
+from info.utils.response_code import RET
 
 
 @passport_blu.route('/login', methods=["POST"])

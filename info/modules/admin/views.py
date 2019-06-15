@@ -1,7 +1,29 @@
 from info.modules.admin import admin_blu
-from flask import render_template, request, current_app, session
+from flask import render_template, request, current_app, session, redirect, url_for
 
 from info.models import User
+
+
+@admin_blu.route('/index')
+def index():
+    """
+    首页逻辑
+    :return:
+    """
+    return render_template("admin/index.html")
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @admin_blu.route("/login",methods = ["GET","POST"])
@@ -20,7 +42,7 @@ def login():
         return render_template("admin/login.html",errmsg = "请输入用户名或密码")
 
     try:
-        user = User.quer.filter(User.mobile ==username,User.is_admin==1).first()
+        user = User.query.filter(User.mobile ==username,User.is_admin==1).first()
     except Exception as e:
         current_app.logger.error(e)
         return render_template("admin/login.html",errmsg = "数据库查询错误")
@@ -33,4 +55,4 @@ def login():
     session["user_id"] = user.id
     session["is_admin"] = user.is_admin
 
-    return "重定向到首页"
+    return redirect(url_for("admin.index"))
