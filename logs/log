@@ -3999,3 +3999,8 @@ INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 15:46:42] "GET /news/21 HTTP/1.
 INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 15:46:47] "GET /news/11 HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 15:46:50] "GET /news/28 HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 15:46:54] "GET /news/1 HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:14:36] "GET /news/1 HTTP/1.1" 200 -

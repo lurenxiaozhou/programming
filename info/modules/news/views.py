@@ -3,7 +3,7 @@ from info import db,constants
 from info.modules.news import news_blu
 from flask import render_template, session, current_app, g, abort, jsonify, request
 from info.utils.common import user_login
-from info.models import News, Comment,CommentLike
+from info.models import News, Comment, CommentLike, User
 from info.utils.response_code import RET
 
 
@@ -257,7 +257,10 @@ def detail(news_id):
             comment_dict["is_like"] = True
         comments_dict_li.append(comment_dict)
 
-
+    # 当前登录用户是否关注该作者
+    is_followed = False
+    if user and news.user.followers.filter(User.id == g.user.id).count() > 0:
+        is_followed = True
 
 
 
@@ -268,6 +271,7 @@ def detail(news_id):
         "clicks_news_li":clicks_news_li,
         "news":news.to_dict(),
         "is_collected":is_collected,
-        "comments_dict_li":comments_dict_li
+        "comments_dict_li":comments_dict_li,
+        "is_followed":is_followed
     }
     return render_template("news/detail.html",data = data)
