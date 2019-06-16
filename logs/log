@@ -4034,3 +4034,70 @@ INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:21:49] "POST /news/followed_
 INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:21:49] "POST /news/followed_user HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:21:50] "POST /news/followed_user HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:21:50] "POST /news/followed_user HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:36:52] "GET /passport/logout HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:36:53] "GET /news/1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:36:54] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:36:55] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:05] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:06] "GET /news/1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:07] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:08] "GET /static/news/js/jquery.form.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:08] "GET /user/user_base_info HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:08] "GET /static/news/js/user_base_info.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:09] "GET /user/user/user_pic_info HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:09] "GET /static/news/js/user_pic_info.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:10] "GET /user/user_follow HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:10] "GET /user/user_follow HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:10] "GET /static/news/css/jquery.pagination.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:10] "GET /static/news/js/jquery.pagination.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:10] "GET /static/news/js/user_follow.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:17] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:17] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:17] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:17] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:18] "GET /static/news/js/main.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:18] "GET /static/news/js/jquery.form.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:18] "GET /static/news/images/logo.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:18] "GET /static/news/images/person01.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:18] "GET /static/news/images/user_pic.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:18] "GET /static/news/images/pic_code.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:18] "GET /user/user_base_info HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:18] "GET /static/news/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:18] "GET /static/news/css/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:18] "GET /static/news/js/jquery-1.12.4.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:18] "GET /static/news/js/user_base_info.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:22] "GET /user/user_follow HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:22] "GET /static/news/css/jquery.pagination.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:22] "GET /static/news/js/jquery.pagination.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:22] "GET /static/news/js/user_follow.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:22] "GET /user/user_follow HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:22] "GET /user/user_follow HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:34] "GET /passport/logout HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:34] "GET /user/info HTTP/1.1" 302 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:34] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:34] "GET /static/news/js/index.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:34] "GET /static/news/images/news_pic.jpg HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:34] "GET /static/news/images/person.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:34] "GET /static/news/images/clock.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:34] "GET /static/news/images/hit_icon.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:34] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:35] "GET /static/news/images/shutoff.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:44] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:44] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:44] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:46] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:46] "GET /user/user_base_info HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:48] "GET /user/user_follow HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:48] "GET /static/news/images/focus_icons.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:37:49] "GET /user/user_follow HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 251-350-049
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:40:29] "GET /user/info HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:40:29] "GET /user/user_base_info HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Jun/2019 16:40:30] "GET /favicon.ico HTTP/1.1" 200 -
