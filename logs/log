@@ -3983,3 +3983,5 @@ INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:39] "GET /favicon.ico HTT
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:42] "GET /news_list?cid=7&page=1 HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:43] "GET /news_list?cid=1&page=1 HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [15/Jun/2019 21:07:53] "GET /admin/news_category HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
