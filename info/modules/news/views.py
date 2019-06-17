@@ -287,6 +287,11 @@ def detail(news_id):
     if user and news in user.collection_news.all():
         is_collected = True
 
+    # 当前登录用户是否关注该作者
+    is_followed = False
+    if user and news.user.followers:
+        is_followed = True
+
     #  查询出当前新闻的评论
     comments = []
     try:
@@ -311,10 +316,7 @@ def detail(news_id):
             comment_dict["is_like"] = True
         comments_dict_li.append(comment_dict)
 
-    # 当前登录用户是否关注该作者
-    is_followed = False
-    if user and news.user.followers.filter(User.id == g.user.id).count() > 0:
-        is_followed = True
+
 
 
 
